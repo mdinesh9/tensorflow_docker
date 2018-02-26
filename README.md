@@ -1,5 +1,7 @@
 # tensorflow_docker
 
+### If you want to pull already built docker imag
+
 
 ### How to use?
   - Clone the repo or download Dockerfile
@@ -7,6 +9,8 @@
   - Build the docker image with your username & preferred image name:
     - docker build -t your_docker_username/prefered_imagename:1.5.0-devel . --no-cache=true
     - In my case it was, docker build -t dinesh001/tensorflow_docker:1.5.0-devel . --no-cache=true
+  - Commit
+    - docker commit container_ID repository_name:tag #dinesh001/tensorflow_docker:1.5.0-devel
   - Push the docker image to your docker hub. (Optional, if you want the image available at hub)
     - Find the docker image id
       - Type docker images - you'll se a list of images with IMAGE ID column
