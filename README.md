@@ -19,5 +19,10 @@
       - Type "docker login" in your terminal and enter your details.
     - Type "docker push repository_name:tag" (in my case, it was docker push dinesh001/tensorflow_docker:1.5.0-devel)
 
+### Other
+
+  - I was getting error when using export inference graph [bug here](https://github.com/tensorflow/models/issues/2861), I replaced line.71 in exporter.py from rewriter_config_pb2.RewriterConfig(optimize_tensor_layout=True) to rewrite_options = rewriter_config_pb2.RewriterConfig(layout_optimizer=True)
+
+
 ### References
   - [repo](https://github.com/sofwerx/android-tensorflow-object-detection/blob/master/Dockerfile) with additions/modifications based on [tensorflow installation](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md)
